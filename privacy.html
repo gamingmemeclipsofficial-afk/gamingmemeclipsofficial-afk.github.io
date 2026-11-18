@@ -19,9 +19,14 @@
     <li><b>Google / YouTube</b> (scope <code>https://www.googleapis.com/auth/youtube</code>): the app uploads the video files
       the owner approved, together with their title, description and tags; sets or changes their scheduled publish time;
       reads their upload and privacy status; and reads the name of the owner's own channel.</li>
-    <li><b>TikTok</b> (scopes <code>user.info.basic</code>, <code>user.info.profile</code>, <code>video.upload</code>): the app
-      reads the owner's display name and username, uploads the approved video to the owner's TikTok inbox as a draft, and
-      reads the status of that upload.</li>
+    <li><b>Google / Gmail</b> (scopes <code>https://www.googleapis.com/auth/gmail.send</code>, <code>openid</code>,
+      <code>email</code>): the app reads the owner's email address and, when a clip is sent to TikTok as a draft, sends one
+      email from the owner's Gmail account to the owner, containing the text to paste in the TikTok description. It never
+      reads, lists or deletes any email.</li>
+    <li><b>TikTok</b> (scopes <code>user.info.basic</code>, <code>user.info.profile</code>, <code>video.upload</code>,
+      <code>video.list</code>): the app reads the owner's display name and username, uploads the approved video to the owner's
+      TikTok inbox as a draft, reads the status of that upload, and reads the view, like and comment counts of the owner's own
+      published videos, to see which clips work best.</li>
   </ul>
 
   <h2>How the data is stored and used</h2>
